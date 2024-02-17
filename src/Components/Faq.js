@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import './Faq.css';
 
 const FAQ = () => {
@@ -14,21 +15,6 @@ const FAQ = () => {
       answer:
         'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
     },
-    {
-        question: 'What is Lorem Ipsum?',
-        answer:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      },
-      {
-        question: 'Why do we use it?',
-        answer:
-          'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-      },
-      {
-        question: 'What is Lorem Ipsum?',
-        answer:
-          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-      },
     // Add more FAQ items as needed
   ];
 
@@ -48,7 +34,7 @@ const FAQ = () => {
             onClick={() => toggleAccordion(index)}
           >
             <span>{faq.question}</span>
-            {activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}
+            {activeIndex === index ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />}
           </button>
           {activeIndex === index && (
             <div className="faq-answer">
