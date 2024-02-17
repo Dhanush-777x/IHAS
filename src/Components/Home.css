@@ -1,0 +1,112 @@
+/* Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Remove default body margin */
+}
+
+.app-container {
+    background: #f3f3ff;
+    min-height: 100vh; /* Use 100vh for full viewport height */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    position: relative; /* Added for absolute positioning of .circle */
+}
+
+.circle {
+    position: absolute; /* Position absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the element */
+    width: 80%; /* Adjusted width for better responsiveness */
+    max-width: 750px; /* Added max-width to limit size on larger screens */
+    height: 60vw; /* Adjusted height to maintain aspect ratio */
+    max-height: 750px; /* Added max-height to limit size on larger screens */
+    background: linear-gradient(to bottom, #fa39ad 40%, #fe6c4c 50%);
+    filter: blur(120px);
+}
+
+.hero-text {
+    font-size: 3vw; /* Responsive font size */
+    z-index: 1; /* Ensure text is above the circle */
+    text-align: center; /* Center the text */
+    color: #000;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .circle {
+        width: 100%; /* Adjusted width for smaller screens */
+        height: 100vh; /* Adjusted height for smaller screens */
+    }
+}
+/* Home.css */
+@keyframes levitate {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.levitate {
+    animation: levitate 2s ease-in-out infinite; /* Adjust duration and timing function as needed */
+}
+
+
+.features-section {
+    background-color: #f3f3ff;
+}
+
+/* Home.css */
+
+.card {
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px) rotateX(4deg) rotateY(2deg);
+}
+
+.glassmorphism {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.features-icon {
+    font-size: 40px;
+    color: #FA4C9A;
+    margin-right: 8px;
+}
+
+.glassmorphism-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    border: 1px solid #000;
+  }
+  
+  .glassmorphism-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }

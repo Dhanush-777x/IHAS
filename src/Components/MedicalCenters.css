@@ -1,0 +1,30 @@
+body{
+  background-color: #f3f3ff;
+}
+.map-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    border-radius: 12px;
+  }
+  
+  .map-container {
+    width: 70%;
+    height: 58vh;
+    border-radius: 12px;
+  }
+  .input-box-container{
+    margin-top: 110px;
+  }
+  .location-search-input{
+    border: 1px solid #046A38;
+    border-radius: 5px;
+    width: 50%;
+  }
+  .input-box-container h1{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 3vw;
+  }

@@ -1,0 +1,16 @@
+.glassmorphism-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    border: 1px solid #000;
+  }
+  
+  .glassmorphism-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
