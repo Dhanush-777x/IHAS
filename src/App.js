@@ -8,8 +8,8 @@ import Diseases from './Components/Diseases';
 import MedicalCenters from './Components/MedicalCenters';
 import ResearchPapers from './Components/ResearchPapers';
 import GovernmentSchemes from './Components/Schemes';
-import FAQ from './Components/Faq';
-import News from './Components/News';
+// import FAQ from './Components/Faq';
+// import News from './Components/News';
 // import ContactUs from './Components/ContactUs';
 // import Chat from './Components/Chat';
 
