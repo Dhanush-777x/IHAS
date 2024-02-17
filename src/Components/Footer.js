@@ -18,9 +18,9 @@ function Footer() {
                         <a href="#" className="footer-link">About</a>
                     </div>
                     <div className="footer-social-icons">
-                        <a href="#" className="footer-icon px-4"><FontAwesomeIcon icon={faFacebook} /></a>
-                        <a href="#" className="footer-icon px-4"><FontAwesomeIcon icon={faTwitter} /></a>
-                        <a href="#" className="footer-icon px-4"><FontAwesomeIcon icon={faInstagram} /></a>
+                        <a href="#Section1" className="footer-icon px-4"><FontAwesomeIcon icon={faFacebook} /></a>
+                        <a href="#Section1" className="footer-icon px-4"><FontAwesomeIcon icon={faTwitter} /></a>
+                        <a href="#Section1" className="footer-icon px-4"><FontAwesomeIcon icon={faInstagram} /></a>
                     </div>
                 </div>
             </footer>
