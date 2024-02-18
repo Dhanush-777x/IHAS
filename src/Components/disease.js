@@ -9,6 +9,7 @@ function Disease() {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                // Fetch data from the JSON file
                 const response = await fetch('http://localhost:3000/diseases');
                 if (!response.ok) {
                     throw new Error('Failed to fetch disease data');
@@ -31,6 +32,7 @@ function Disease() {
         fetchData();
     }, [diseaseName]);
 
+
     const handleTabClick = (tabNumber) => {
         setActiveTab(tabNumber);
     };
@@ -41,7 +43,7 @@ function Disease() {
 
     return (
         <div className="mt-10 md:mt-40">
-            <h1 className="text-center text-3xl font-bold my-8">{diseaseData.name}</h1>
+            <h1 className="text-center text-4xl font-bold my-8">{diseaseData.name}</h1>
             <div className="flex flex-col md:flex-row p-5 md:p-20">
                 <div className="md:w-1/3 mb-5 md:mb-0 bg-white bg-opacity-70 backdrop-blur-lg rounded-lg shadow-lg border-2 h-full">
                     <div className="flex flex-col space-y-2">
@@ -50,26 +52,63 @@ function Disease() {
                             {activeTab === 1 && <div className="w-1 h-full bg-blue-500 opacity-30 rounded-r-lg"></div>}
                         </button>
                         <button type="button" className={`py-6 px-4 text-sm rounded-lg focus:outline-none flex items-center justify-between hover:bg-secondary ${activeTab === 2 ? 'text-white bg-black hover:bg-black' : ''}`} onClick={() => handleTabClick(2)}>
-                            Symptoms
+                            Prevention
                             {activeTab === 2 && <div className="w-1 h-full bg-blue-500 opacity-30 rounded-r-lg"></div>}
                         </button>
                         <button type="button" className={`py-6 px-4 text-sm rounded-lg focus:outline-none flex items-center justify-between hover:bg-secondary ${activeTab === 3 ? 'text-white bg-black hover:bg-black' : ''}`} onClick={() => handleTabClick(3)}>
-                            Tab 3
+                            Treatment
                             {activeTab === 3 && <div className="w-1 h-full bg-blue-500 opacity-30 rounded-r-lg"></div>}
                         </button>
                     </div>
                 </div>
 
                 <div className="md:w-2/3 lg:ml-10">
-                    <div className="p-4 bg-white bg-opacity-50 backdrop-blur-lg rounded-lg shadow-lg">
+                    <div className="p-4 bg-white bg-opacity-50 backdrop-blur-lg rounded-lg shadow-lg text-left">
                         {activeTab === 1 && (
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                            <p className='py-10'>
+                                <span className='text-2xl font-semibold'>{diseaseData.name}: Overview</span> <br /> <br />
+                                {diseaseData.Overview} <br /> <br /> <br />
+                                <span className='text-2xl font-semibold'>Types</span> <br /> <br />
+                                {diseaseData.type1} <br /> <br />
+                                {diseaseData.type2} <br /> <br /> <br />
+                                <span className='text-2xl font-semibold'>Facts</span> <br /> <br />
+                                {diseaseData.facts} <br /> <br /> <br />
+                                <span className='text-2xl font-semibold'>Period of Communicability</span> <br /> <br />
+                                {diseaseData.period}<br /> <br /> <br />
+
+                                <br /> <br />
+                                <br /> <br />
+                                <br /> <br />
+                            </p>
                         )}
                         {activeTab === 2 && (
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                            <p className='py-10'>
+                                <span className='text-2xl font-semibold'>Preventive Measures</span> <br /> <br />
+                                {diseaseData.measure1}<br /> <br />
+                                {diseaseData.measure2}<br /> <br />
+                                {diseaseData.measure3}<br /> <br />
+                                {diseaseData.measure4}<br /> <br />
+                                {diseaseData.measure5}<br /> <br />
+                                {diseaseData.measure6}<br /> <br />
+                                {diseaseData.measure7}<br /> <br />
+                            </p>
                         )}
                         {activeTab === 3 && (
-                            <p>This is the content of Tab 3</p>
+                            <p>
+                                <span className='text-2xl font-semibold'>Do's</span> <br /> <br />
+                                {diseaseData.do} <br /> <br /> <br />
+                                <span className='text-2xl font-semibold'>Dont's</span> <br /> <br />
+                                {diseaseData.dont} <br /> <br /> <br />
+                                <span className='text-2xl font-semibold'>Risk Factors</span> <br /> <br />
+                                {diseaseData.risk} <br /> <br /> <br />
+                                <span className='text-2xl font-semibold'>Specialists</span> <br /> <br />
+                                {diseaseData.specialists}<br /> <br /> <br />
+                                <span className='text-2xl font-semibold'>Ayush</span> <br /> <br />
+                                {diseaseData.ayush}<br /> <br /> <br />
+                                <br /> <br />
+                                <br /> <br />
+                                <br /> <br />
+                            </p>
                         )}
                     </div>
                 </div>
