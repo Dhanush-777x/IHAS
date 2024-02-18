@@ -24,11 +24,6 @@ const Navbar = () => {
     };
   }, []);
 
-  const variants = {
-    open: { opacity: 1, height: "auto" },
-    closed: { opacity: 0, height: 0 },
-  };
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
