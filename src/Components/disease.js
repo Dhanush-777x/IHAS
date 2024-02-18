@@ -47,18 +47,35 @@ function Disease() {
             <div className="flex flex-col md:flex-row p-5 md:p-20">
                 <div className="md:w-1/3 mb-5 md:mb-0 bg-white bg-opacity-70 backdrop-blur-lg rounded-lg shadow-lg border-2 h-full">
                     <div className="flex flex-col space-y-2">
-                        <button type="button" className={`py-6 px-4 text-sm rounded-lg focus:outline-none flex items-center justify-between hover:bg-secondary ${activeTab === 1 ? 'text-white bg-black hover:bg-black' : ''}`} onClick={() => handleTabClick(1)}>
+                        <button
+                            type="button"
+                            className={`py-6 px-4 text-sm rounded-lg focus:outline-none flex items-center justify-between ${activeTab === 1 ? 'text-white bg-black' : 'hover:bg-secondary'
+                                } ${activeTab === 1 ? '' : 'hover:bg-secondary'}`}
+                            onClick={() => handleTabClick(1)}
+                        >
                             Overview
                             {activeTab === 1 && <div className="w-1 h-full bg-blue-500 opacity-30 rounded-r-lg"></div>}
                         </button>
-                        <button type="button" className={`py-6 px-4 text-sm rounded-lg focus:outline-none flex items-center justify-between hover:bg-secondary ${activeTab === 2 ? 'text-white bg-black hover:bg-black' : ''}`} onClick={() => handleTabClick(2)}>
+                        <button
+                            type="button"
+                            className={`py-6 px-4 text-sm rounded-lg focus:outline-none flex items-center justify-between ${activeTab === 2 ? 'text-white bg-black' : ''
+                                } ${activeTab !== 2 ? 'hover:bg-secondary' : ''}`}
+                            onClick={() => handleTabClick(2)}
+                        >
                             Prevention
                             {activeTab === 2 && <div className="w-1 h-full bg-blue-500 opacity-30 rounded-r-lg"></div>}
                         </button>
-                        <button type="button" className={`py-6 px-4 text-sm rounded-lg focus:outline-none flex items-center justify-between hover:bg-secondary ${activeTab === 3 ? 'text-white bg-black hover:bg-black' : ''}`} onClick={() => handleTabClick(3)}>
+
+                        <button
+                            type="button"
+                            className={`py-6 px-4 text-sm rounded-lg focus:outline-none flex items-center justify-between ${activeTab === 3 ? 'text-white bg-black' : ''
+                                } ${activeTab !== 3 ? 'hover:bg-secondary' : ''}`}
+                            onClick={() => handleTabClick(3)}
+                        >
                             Treatment
                             {activeTab === 3 && <div className="w-1 h-full bg-blue-500 opacity-30 rounded-r-lg"></div>}
                         </button>
+
                     </div>
                 </div>
 
