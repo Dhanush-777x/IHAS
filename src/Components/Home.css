@@ -37,12 +37,26 @@ body {
     color: #000;
 }
 
+/* Home.css */
+
+.hero-text {
+    font-size: 4rem; /* Default font size for larger devices */
+  }
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .circle {
         width: 100%; /* Adjusted width for smaller screens */
         height: 100vh; /* Adjusted height for smaller screens */
     }
+    .hero-text {
+        font-size: 1.8rem; /* Adjust the font size as needed */
+      }
+}
+@media (max-width: 1024px) {
+    .hero-text {
+        font-size: 2.3rem; /* Adjust the font size as needed */
+      }
 }
 /* Home.css */
 @keyframes levitate {
