@@ -45,7 +45,7 @@ const Navbar = () => {
         </Link>
         <div className="hidden lg:flex items-center justify-center flex-1">
           <HashLink to="/home#Section1" className="py-3 px-5 text-center text-gray-600 hover:text-black">Home</HashLink>
-          <Link to="/diseases" className="py-3 px-5 text-center text-gray-600 hover:text-black">Patient's Corner</Link>
+          <Link to="/patient-corner" className="py-3 px-5 text-center text-gray-600 hover:text-black">Patient's Corner</Link>
           <Link to="/diseases" className="py-3 px-5 text-center text-gray-600 hover:text-black">Healthcare Providers</Link>
           <Link to="/medical-centers" className="py-3 px-5 text-center text-gray-600 hover:text-black">Medical Centers</Link>
           <Link to="/research-papers" className="py-3 px-5 text-center text-gray-600 hover:text-black">Researchers</Link>

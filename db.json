@@ -1,0 +1,110 @@
+{
+    "diseases": [
+      {
+        "name": "Diabetes",
+        "overview": {
+          "definition": "Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces. Insulin is a hormone that regulates blood sugar.",
+          "effects": "Hyperglycaemia, or raised blood sugar, is a common effect of uncontrolled diabetes and over time leads to serious damage to many of the body's systems, especially the nerves and blood vessels."
+        },
+        "statistics": {
+          "india": {
+            "population_above_18_years_with_diabetes": 77000000,
+            "prediabetics": 25000000,
+            "awareness": "More than 50% of people are unaware of their diabetic status which leads to health complications if not detected and treated early."
+          },
+          "risks": {
+            "heart_attacks_strokes": "Adults with diabetes have a two- to three-fold increased risk of heart attacks and strokes.",
+            "neuropathy": "Combined with reduced blood flow, neuropathy (nerve damage) in the feet increases the chance of foot ulcers, infection, and the eventual need for limb amputation.",
+            "retinopathy": "Diabetic retinopathy is an important cause of blindness and occurs as a result of long-term accumulated damage to the small blood vessels in the retina.",
+            "kidney_failure": "Diabetes is among the leading causes of kidney failure."
+          }
+        },
+        "types": [
+          {
+            "type": "Type 1 Diabetes",
+            "description": "If you have type 1 diabetes, your pancreas doesn’t make insulin or makes very little insulin. Insulin helps blood sugar enter the cells in your body for use as energy. Without insulin, blood sugar can’t get into cells and builds up in the bloodstream. High blood sugar is damaging to the body and causes many of the symptoms and complications of diabetes.",
+            "prevalence": "Type 1 diabetes was once called insulin-dependent or juvenile diabetes, but it can develop at any age. Type 1 diabetes is less common than type 2—about 5-10% of people with diabetes have type 1.",
+            "treatment": "Currently, no one knows how to prevent type 1 diabetes, but it can be treated successfully by following your doctor’s recommendations for living a healthy lifestyle, managing your blood sugar, getting regular health checkups, and receiving diabetes self-management education and support.",
+            "causes": {
+              "autoimmune_reaction": "Type 1 diabetes is thought to be caused by an autoimmune reaction where the body attacks itself by mistake. This reaction destroys the cells in the pancreas that make insulin, called beta cells. Some people have certain genes that make them more likely to develop type 1 diabetes, but a trigger in the environment, such as a virus, may also play a part.",
+              "diet_and_lifestyle": "Diet and lifestyle habits don’t cause type 1 diabetes."
+            },
+            "complications": {
+              "hypoglycemia": {
+                "description": "Hypoglycemia (low blood sugar) can happen quickly and needs to be treated quickly.",
+                "causes": "Most often caused by too much insulin, waiting too long for a meal or snack, not eating enough, or getting extra physical activity.",
+                "treatment": "Meet with your doctor for step-by-step instructions. Your treatment plan may need to be changed if you have low blood sugar several times a week."
+              },
+              "diabetic_ketoacidosis": {
+                "description": "Diabetic ketoacidosis (DKA) is a serious complication of diabetes that can be life-threatening.",
+                "causes": "Develops when you don’t have enough insulin to let blood sugar into your cells. Very high blood sugar and low insulin levels lead to DKA.",
+                "prevention": "Make sure you understand how you can prevent and treat DKA. Talk with your doctor."
+              }
+            }
+          },
+          {
+            "type": "Type 2 Diabetes",
+            "description": "Type 2 diabetes most often develops in people over age 45, but more and more children, teens, and young adults are also developing it.",
+            "causes": {
+              "insulin_resistance": "If you have type 2 diabetes, cells don’t respond normally to insulin; this is called insulin resistance. Your pancreas makes more insulin to try to get cells to respond. Eventually your pancreas can’t keep up, and your blood sugar rises, setting the stage for prediabetes and type 2 diabetes."
+            },
+            "effects": "High blood sugar is damaging to the body and can cause other serious health problems, such as heart disease, vision loss, and kidney disease."
+          }
+        ]
+      },
+
+      {
+        "name": "Cancer",
+        "overview": {
+          "definition": "Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces. Insulin is a hormone that regulates blood sugar.",
+          "effects": "Hyperglycaemia, or raised blood sugar, is a common effect of uncontrolled diabetes and over time leads to serious damage to many of the body's systems, especially the nerves and blood vessels."
+        },
+        "statistics": {
+          "india": {
+            "population_above_18_years_with_diabetes": 77000000,
+            "prediabetics": 25000000,
+            "awareness": "More than 50% of people are unaware of their diabetic status which leads to health complications if not detected and treated early."
+          },
+          "risks": {
+            "heart_attacks_strokes": "Adults with diabetes have a two- to three-fold increased risk of heart attacks and strokes.",
+            "neuropathy": "Combined with reduced blood flow, neuropathy (nerve damage) in the feet increases the chance of foot ulcers, infection, and the eventual need for limb amputation.",
+            "retinopathy": "Diabetic retinopathy is an important cause of blindness and occurs as a result of long-term accumulated damage to the small blood vessels in the retina.",
+            "kidney_failure": "Diabetes is among the leading causes of kidney failure."
+          }
+        },
+        "types": [
+          {
+            "type": "Type 1 Diabetes",
+            "description": "If you have type 1 diabetes, your pancreas doesn’t make insulin or makes very little insulin. Insulin helps blood sugar enter the cells in your body for use as energy. Without insulin, blood sugar can’t get into cells and builds up in the bloodstream. High blood sugar is damaging to the body and causes many of the symptoms and complications of diabetes.",
+            "prevalence": "Type 1 diabetes was once called insulin-dependent or juvenile diabetes, but it can develop at any age. Type 1 diabetes is less common than type 2—about 5-10% of people with diabetes have type 1.",
+            "treatment": "Currently, no one knows how to prevent type 1 diabetes, but it can be treated successfully by following your doctor’s recommendations for living a healthy lifestyle, managing your blood sugar, getting regular health checkups, and receiving diabetes self-management education and support.",
+            "causes": {
+              "autoimmune_reaction": "Type 1 diabetes is thought to be caused by an autoimmune reaction where the body attacks itself by mistake. This reaction destroys the cells in the pancreas that make insulin, called beta cells. Some people have certain genes that make them more likely to develop type 1 diabetes, but a trigger in the environment, such as a virus, may also play a part.",
+              "diet_and_lifestyle": "Diet and lifestyle habits don’t cause type 1 diabetes."
+            },
+            "complications": {
+              "hypoglycemia": {
+                "description": "Hypoglycemia (low blood sugar) can happen quickly and needs to be treated quickly.",
+                "causes": "Most often caused by too much insulin, waiting too long for a meal or snack, not eating enough, or getting extra physical activity.",
+                "treatment": "Meet with your doctor for step-by-step instructions. Your treatment plan may need to be changed if you have low blood sugar several times a week."
+              },
+              "diabetic_ketoacidosis": {
+                "description": "Diabetic ketoacidosis (DKA) is a serious complication of diabetes that can be life-threatening.",
+                "causes": "Develops when you don’t have enough insulin to let blood sugar into your cells. Very high blood sugar and low insulin levels lead to DKA.",
+                "prevention": "Make sure you understand how you can prevent and treat DKA. Talk with your doctor."
+              }
+            }
+          },
+          {
+            "type": "Type 2 Diabetes",
+            "description": "Type 2 diabetes most often develops in people over age 45, but more and more children, teens, and young adults are also developing it.",
+            "causes": {
+              "insulin_resistance": "If you have type 2 diabetes, cells don’t respond normally to insulin; this is called insulin resistance. Your pancreas makes more insulin to try to get cells to respond. Eventually your pancreas can’t keep up, and your blood sugar rises, setting the stage for prediabetes and type 2 diabetes."
+            },
+            "effects": "High blood sugar is damaging to the body and can cause other serious health problems, such as heart disease, vision loss, and kidney disease."
+          }
+        ]
+      }
+    ]
+  }
+  
