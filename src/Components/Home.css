@@ -50,12 +50,12 @@ body {
         height: 100vh; /* Adjusted height for smaller screens */
     }
     .hero-text {
-        font-size: 1.8rem; /* Adjust the font size as needed */
+        font-size: 0.2rem; /* Adjust the font size as needed */
       }
 }
 @media (max-width: 1024px) {
     .hero-text {
-        font-size: 2.3rem; /* Adjust the font size as needed */
+        font-size: 1.5rem; /* Adjust the font size as needed */
       }
 }
 /* Home.css */
