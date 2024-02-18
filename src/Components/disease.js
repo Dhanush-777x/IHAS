@@ -10,7 +10,7 @@ function Disease() {
         const fetchData = async () => {
             try {
                 // Fetch data from the JSON file
-                const response = await fetch('http://localhost:3000/diseases');
+                const response = await fetch('https://dhanush-777x.github.io/json-api/db.json');
                 if (!response.ok) {
                     throw new Error('Failed to fetch disease data');
                 }

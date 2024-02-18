@@ -10,12 +10,14 @@ function PatientCorner() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/diseases');
+        const response = await fetch('https://dhanush-777x.github.io/json-api/db.json');
         if (!response.ok) {
           throw new Error('Failed to fetch diseases data');
         }
         const data = await response.json();
+        console.log(diseases);
         setDiseases(data);
+        console.log(data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
