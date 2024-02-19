@@ -89,14 +89,14 @@ const Navbar = () => {
           >
             <Link to="/home" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Home</Link>
             <Link to="/patient-corner" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Patient's Corner</Link>
-            <Link to="/" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Healthcare Providers</Link>
+            <Link to="/healthcare-providers" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Healthcare Providers</Link>
             <Link to="/research-papers" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Researchers</Link>
             <Link to="/schemes" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Schemes</Link>
             <HashLink to="/contact-us#footerSection" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Contact Us</HashLink>
-            <Link to="" className="glassmorphism-button py-2 mx-10 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={toggleMenu}>
+            {/* <Link to="" className="glassmorphism-button py-2 mx-10 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={toggleMenu}>
               <FontAwesomeIcon icon={faComments} className="mr-2" />
               Chat with AI
-            </Link>
+            </Link> */}
           </motion.div>
         )}
       </AnimatePresence>
