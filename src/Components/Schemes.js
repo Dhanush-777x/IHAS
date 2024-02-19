@@ -18,28 +18,28 @@ function Schemes() {
   }, []);
 
   useEffect(() => {
+    const filterSchemes = () => {
+      let filtered = schemes;
+
+      if (filterLevel !== 'all') {
+        filtered = filtered.filter(scheme => scheme.level === filterLevel);
+      }
+
+      if (filterBenefit !== 'all') {
+        filtered = filtered.filter(scheme => scheme.benefit_type === filterBenefit);
+      }
+
+      if (searchQuery.trim() !== '') {
+        filtered = filtered.filter(scheme =>
+          scheme.title.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+      }
+
+      setFilteredSchemes(filtered);
+    };
+
     filterSchemes();
-  }, [filterLevel, filterBenefit, searchQuery]);
-
-  const filterSchemes = () => {
-    let filtered = schemes;
-
-    if (filterLevel !== 'all') {
-      filtered = filtered.filter(scheme => scheme.level === filterLevel);
-    }
-
-    if (filterBenefit !== 'all') {
-      filtered = filtered.filter(scheme => scheme.benefit_type === filterBenefit);
-    }
-
-    if (searchQuery.trim() !== '') {
-      filtered = filtered.filter(scheme =>
-        scheme.title.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-
-    setFilteredSchemes(filtered);
-  };
+  }, [filterLevel, filterBenefit, searchQuery, schemes]);
 
   return (
     <div>
