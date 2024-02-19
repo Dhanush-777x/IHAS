@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ChatWithAIButton from './chatWithai';
 
 function Schemes() {
   const [schemes, setSchemes] = useState([]);
@@ -43,6 +44,7 @@ function Schemes() {
 
   return (
     <div>
+      <ChatWithAIButton/>
       <div>
         <h1 className='text-4xl font-bold mt-40'>Government Schemes</h1>
       </div>

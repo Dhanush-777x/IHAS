@@ -1,8 +1,11 @@
 import React from 'react'
+import ChatWithAIButton from './chatWithai'
 
 function ResearchPapers() {
   return (
-    <div>ResearchPapers</div>
+    <div>
+      <ChatWithAIButton/>
+    </div>
   )
 }
 

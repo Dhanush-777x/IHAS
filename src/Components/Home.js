@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
 import { faFlask } from '@fortawesome/free-solid-svg-icons/faFlask';
+import ChatWithAIButton from './chatWithai';
 
 function Home() {
     return (
@@ -23,7 +24,7 @@ function Home() {
                 <h1 className="hero-text font-bold text-white levitate">Empowering Health: Connecting Patients, Doctors, and Researchers for a Better Tomorrow</h1>
                 <div className="circle rounded-full"></div>
             </motion.div>
-
+            <ChatWithAIButton/>
             <motion.div
                 id='Section2'
                 className='features-section flex flex-col justify-center items-center'
@@ -43,7 +44,7 @@ function Home() {
                         </div>
                         <h2 className="text-lg font-semibold mb-2">Patients</h2>
                         <p className="text-gray-700 mb-8">Access comprehensive information on diseases, symptoms, vaccinations, and nearby medical centers.</p>
-                        <Link to="/diseases" className="glassmorphism-button py-2 my-10 mx-10 text-center text-gray-700 hover:text-black hover:shadow-2xl lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black"
+                        <Link to="/patient-corner" className="glassmorphism-button py-2 my-10 mx-10 text-center text-gray-700 hover:text-black hover:shadow-2xl lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black"
                             whileHover={{ scale: 1.05 }}
                         >
                             View More
@@ -59,7 +60,7 @@ function Home() {
                         </div>
                         <h2 className="text-lg font-semibold mb-2">Doctors</h2>
                         <p className="text-gray-700 mb-8">Explore advanced medical equipment and surgical procedures for effective patient care.</p>
-                        <Link to="" className="glassmorphism-button py-2 my-10 mx-10 text-center text-gray-700 hover:text-black hover:shadow-2xl lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black"
+                        <Link to="/patient-corner" className="glassmorphism-button py-2 my-10 mx-10 text-center text-gray-700 hover:text-black hover:shadow-2xl lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black"
                             whileHover={{ scale: 1.05 }}
                         >
                             View More

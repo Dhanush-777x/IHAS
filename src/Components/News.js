@@ -1,47 +1,50 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const News = () => {
-    return (
-        <div className='my-40' id='NewsSection'>
-            <div className='mt-20 font-semibold text-4xl'>
-                <h1>News and Updates</h1>
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await axios.get('https://newsapi.org/v2/top-headlines', {
+          params: {
+            country: 'us',
+            category: 'health',
+            apiKey: '7b0d8cbdc40c464d8630f3e1ef0fdf3' // Replace 'YOUR_NEWS_API_KEY' with your actual News API key
+          }
+        });
+        setNews(response.data.articles.slice(0, 8)); // Limit to 8 news articles
+      } catch (error) {
+        console.error('Error fetching news:', error);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
+  return (
+    <div className='my-40' id='NewsSection'>
+      <div className='mt-20 font-semibold text-4xl'>
+        <h1>News and Updates</h1>
+      </div>
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {news.map((article, index) => (
+            <div key={index} className="max-w-lg bg-white rounded-xl overflow-hidden shadow-lg">
+              <div className="p-6">
+              <img src={article.urlToImage} alt={article.title} className="mb-4 rounded-md h-60 w-full object-cover" />
+                <h2 className="text-xl font-semibold text-gray-800 mb-2">{article.title}</h2>
+                <p className="text-gray-600 mb-2">{article.description}</p>
+                <p className="text-sm text-gray-500">Published: {new Date(article.publishedAt).toLocaleString()}</p>
+                <a href={article.url} className="block mt-4 text-sm font-semibold text-orange-600" target='_blank' rel="noopener noreferrer">Read More</a>
+              </div>
             </div>
-            <div className="container mx-auto px-4 py-8">
-                <div className="flex justify-center items-center">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div className="max-w-lg bg-white rounded-xl overflow-hidden shadow-lg">
-                            <div className="p-10">
-                                <h2 className="text-xl font-semibold text-gray-800 mb-2 text-left">Long COVID fatigue linked to malfunctioning mitochondria</h2>
-                                <p className="text-gray-600 text-left">At least 65 million peopleTrusted Source around the world have long COVID, a condition where they continue to experience COVID-19 symptoms</p>
-                                <a href="https://www.medicalnewstoday.com/articles/long-covid-fatigue-linked-to-malfunctioning-mitochondria" className="block mt-4 text-sm font-semibold text-orange-600" target='_blank'  rel="noreferrer">Read More</a>
-                            </div>
-                        </div>
-                        <div className="max-w-lg bg-white rounded-xl overflow-hidden shadow-lg">
-                            <div className="p-10">
-                                <h2 className="text-xl text-left font-semibold text-gray-800 mb-2">Why people with severe psoriasis have a higher risk of heart disease</h2>
-                                <p className="text-gray-600 text-left">Globally, psoriasis affects an estimated 125 millionTrusted Source people around the world. Despite its prevalence, this immune-mediated dermatological condition still holds many mysteries.</p>
-                                <a href="https://www.medicalnewstoday.com/articles/why-people-with-severe-psoriasis-have-a-higher-risk-of-heart-disease" className="block mt-4 text-sm font-semibold text-orange-600" target='_blank'  rel="noreferrer">Read More</a>
-                            </div>
-                        </div>
-                        <div className="max-w-lg mx-auto bg-white rounded-xl overflow-hidden shadow-lg">
-                            <div className="p-10">
-                                <h2 className="text-xl font-semibold text-gray-800 mb-2 text-left">Researchers introduce a pioneering approach to combat neurodegenerative diseases</h2>
-                                <p className="text-gray-600 text-left">Researchers led by Northwestern University and the University of Wisconsin-Madison have introduced a pioneering approach aimed at combating neurodegenerative diseases such as Alzheimer's disease, Parkinson's disease and Amyotrophic lateral sclerosis (ALS).</p>
-                                <a href="https://www.news-medical.net/news/20240216/Researchers-introduce-a-pioneering-approach-to-combat-neurodegenerative-diseases.aspx" className="block mt-4 text-sm font-semibold text-orange-600" target='_blank'  rel="noreferrer">Read More</a>
-                            </div>
-                        </div>
-                        <div className="max-w-lg mx-auto bg-white rounded-xl overflow-hidden shadow-lg">
-                            <div className="p-10">
-                                <h2 className="text-xl font-semibold text-gray-800 mb-2 text-left">Switching arms for vaccines could help boost your immunity, study finds</h2>
-                                <p className="text-gray-600 text-left">people receive the COVID-19 vaccine in the upper arm, which has multidose options. Multidose vaccines can be received in the same or different injection site for each dose. Other examplesTrusted Source of multidose vaccines include those for measles mumps and rubella (MMR) and shingles.</p>
-                                <a href="https://www.medicalnewstoday.com/articles/alternating-arms-for-vaccines-may-boost-immunity" className="block mt-4 text-sm font-semibold text-orange-600" target='_blank'  rel="noreferrer">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          ))}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default News;

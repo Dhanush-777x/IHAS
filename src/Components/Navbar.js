@@ -28,11 +28,14 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <motion.nav
-      className={`fixed top-0 z-10 w-full py-7 bg-secondary ${
-        isScrolled ? "lg:bg-secondary shadow-lg" : "lg:bg-transparent"
-      }`}
+      className={`fixed top-0 z-10 w-full py-7 bg-secondary ${isScrolled ? "lg:bg-secondary shadow-lg" : "lg:bg-transparent"
+        }`}
     >
       <div className="flex items-center justify-between w-full mx-auto px-4">
         <Link to="/" className="flex items-center text-gray-700 hover:text-black">
@@ -41,19 +44,18 @@ const Navbar = () => {
             src={logo}
             alt="Logo"
           />
-          <span className="text-xl font-semibold">IHAS</span>
+          <span className="text-xl font-semibold mr-10">IHAS</span>
         </Link>
         <div className="hidden lg:flex items-center justify-center flex-1">
           <HashLink to="/home#Section1" className="py-3 px-5 text-center text-gray-600 hover:text-black">Home</HashLink>
           <Link to="/patient-corner" className="py-3 px-5 text-center text-gray-600 hover:text-black">Patient's Corner</Link>
           <Link to="/diseases" className="py-3 px-5 text-center text-gray-600 hover:text-black">Healthcare Providers</Link>
-          <Link to="/medical-centers" className="py-3 px-5 text-center text-gray-600 hover:text-black">Medical Centers</Link>
           <Link to="/research-papers" className="py-3 px-5 text-center text-gray-600 hover:text-black">Researchers</Link>
           <HashLink to="/news#NewsSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">News</HashLink>
           <Link to="/schemes" className="py-3 px-5 text-center text-gray-600 hover:text-black">Schemes</Link>
           <HashLink to="/faq#faqSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">FAQ</HashLink>
           <HashLink to="/contact-us#footerSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">Contact Us</HashLink>
-          </div>
+        </div>
         <motion.button
           onClick={toggleMenu}
           className="text-gray-700 hover:text-black focus:outline-none lg:hidden shadow-lg"
@@ -73,14 +75,8 @@ const Navbar = () => {
             ></path>
           </svg>
         </motion.button>
-        <Link
-          to="/chat"
-          className="glassmorphism-button hidden lg:block ml-4"
-        >
-          <FontAwesomeIcon icon={faComments} className="mr-2" />
-          Chat with Prakriti
-        </Link>
-        </div>
+        
+      </div>
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -91,18 +87,17 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-        <Link to="/home" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Home</Link> 
-        <Link to="/patient-corner" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Patient's Corner</Link>
-        <Link to="/" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Healthcare Providers</Link>   
-        <Link to="/medical-centers" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Medical Centers</Link> 
-        <Link to="/research-papers" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Researchers</Link> 
-        <Link to="/schemes" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Schemes</Link>
-        <HashLink to="/contact-us#footerSection" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Contact Us</HashLink> 
-        <Link to="" className="glassmorphism-button py-2 mx-10 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={toggleMenu}>
-          <FontAwesomeIcon icon={faComments} className="mr-2" />
-          Chat with Prakriti
-        </Link>
-        </motion.div>
+            <Link to="/home" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Home</Link>
+            <Link to="/patient-corner" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Patient's Corner</Link>
+            <Link to="/" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Healthcare Providers</Link>
+            <Link to="/research-papers" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Researchers</Link>
+            <Link to="/schemes" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Schemes</Link>
+            <HashLink to="/contact-us#footerSection" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Contact Us</HashLink>
+            <Link to="" className="glassmorphism-button py-2 mx-10 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={toggleMenu}>
+              <FontAwesomeIcon icon={faComments} className="mr-2" />
+              Chat with AI
+            </Link>
+          </motion.div>
         )}
       </AnimatePresence>
     </motion.nav>

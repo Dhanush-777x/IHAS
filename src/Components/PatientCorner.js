@@ -1,61 +1,68 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import AllDiseases from './AllDiseases';
+import MedicalCenters from './MedicalCenters';
+import Footer from './Footer';
+import Pharmacies from './pharmacies';
+import ChatWithAIButton from './chatWithai';
 
 function PatientCorner() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [diseases, setDiseases] = useState([]);
+  const [activeTab, setActiveTab] = useState(1);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://dhanush-777x.github.io/json-api/db.json');
-        if (!response.ok) {
-          throw new Error('Failed to fetch diseases data');
-        }
-        const data = await response.json();
-        console.log(diseases);
-        setDiseases(data);
-        console.log(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+    window.scrollTo(0, 0); // Scroll to the top of the page when the component mounts
+  }, []);
 
-    fetchData();
-  },[diseases]);
-
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
+  const handleTabChange = (tabIndex) => {
+    setActiveTab(tabIndex);
   };
-
-  const filteredDiseases = diseases.filter(disease =>
-    disease.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   return (
     <div className="p-8 mt-40">
-      {/* Search bar */}
-      <input
-        type="text"
-        placeholder="Search diseases"
-        value={searchTerm}
-        onChange={handleSearchChange}
-        className="w-full max-w-md p-4 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-      />
-
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-        {filteredDiseases.map((disease, index) => (
-          <Link to={`/disease/${disease.name}`} key={index}>
-            <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition duration-300">
-              <h2 className="text-xl font-semibold">{disease.name}</h2>
-              <FontAwesomeIcon icon={faArrowRight} className="text-gray-500 text-lg" />
-            </div>
-          </Link>
-        ))}
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mb-8">
+        <button
+          className={`rounded-lg py-4 px-4 text-lg ${activeTab === 1 ? 'bg-black text-white' : 'bg-gray-200'}`}
+          onClick={() => handleTabChange(1)}
+        >
+          Diseases
+        </button>
+        <button
+          className={`rounded-lg py-4 px-4 text-lg ${activeTab === 2 ? 'bg-black text-white' : 'bg-gray-200'}`}
+          onClick={() => handleTabChange(2)}
+        >
+          Medical Centres
+        </button>
+        <button
+          className={`rounded-lg py-4 px-4 text-lg ${activeTab === 3 ? 'bg-black text-white' : 'bg-gray-200'}`}
+          onClick={() => handleTabChange(3)}
+        >
+          Pharmacies and Medical Stores
+        </button>
       </div>
+
+      <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 mb-20">
+        {/* Content for Tab 1 */}
+        {activeTab === 1 && (
+          <div>
+            <AllDiseases />
+          </div>
+        )}
+
+        {/* Content for Tab 2 */}
+        {activeTab === 2 && (
+          <div>
+            <MedicalCenters />
+          </div>
+        )}
+
+        {/* Content for Tab 3 */}
+        {activeTab === 3 && (
+          <div>
+            <Pharmacies />
+          </div>
+        )}
+      </div>
+      <Footer />
+      <ChatWithAIButton/>
     </div>
   );
 }

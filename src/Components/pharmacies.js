@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './MedicalCenters.css';
 
-const MedicalCenters = () => {
+const Pharmacies = () => {
   const [map, setMap] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -40,9 +40,9 @@ const MedicalCenters = () => {
           // Search for nearby hospitals
           const request = {
             location: userLocation,
-            radius: '5000', // within 5km radius
-            type: 'hospital',
-            keyword: 'hospital'
+            radius: '5000',
+            type: 'pharmacy',
+            keyword: 'pharmacy'
           };
 
           const service = new window.google.maps.places.PlacesService(newMap);
@@ -125,7 +125,7 @@ const MedicalCenters = () => {
   return (
     <div className="">
       <div className='input-box-container'>
-      <h1 className='text-3xl font-semibold'>Search for Nearby Medical Centers</h1>
+      <h1 className='text-3xl font-semibold'>Search for Nearby Pharmacies</h1>
       <input
       className='location-search-input p-3 mt-10'
         type="text"
@@ -143,4 +143,4 @@ const MedicalCenters = () => {
   );
 };
 
-export default MedicalCenters;
+export default Pharmacies;

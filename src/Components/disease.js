@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import ChatWithAIButton from './chatWithai';
 
 function Disease() {
     const { diseaseName } = useParams();
@@ -43,6 +44,7 @@ function Disease() {
 
     return (
         <div className="mt-10 md:mt-40">
+            <ChatWithAIButton/>
             <h1 className="text-center text-4xl font-bold mt-40">{diseaseData.name}</h1>
             <div className="flex flex-col lg:flex-row p-5 md:p-20">
                 <div className="lg:w-1/3 mb-5 lg:mb-10 bg-white bg-opacity-70 backdrop-blur-lg rounded-lg shadow-lg border-2 h-full">
