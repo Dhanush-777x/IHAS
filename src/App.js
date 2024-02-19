@@ -9,6 +9,7 @@ import ResearchPapers from './Components/ResearchPapers';
 import Schemes from './Components/Schemes';
 import PatientCorner from './Components/PatientCorner';
 import Disease from './Components/disease';
+import ConferenceScraper from './Components/Healthcare';
 // import FAQ from './Components/Faq';
 // import News from './Components/News';
 // import ContactUs from './Components/ContactUs';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/patient-corner" element={<PatientCorner/>} />
           <Route path="/disease/:diseaseName" element={<Disease/>} />
           <Route path="/medical-centers" element={<MedicalCenters/>} />
+          <Route path="/healthcare-providers" element={<ConferenceScraper/>} />
           <Route path="/research-papers" element={<ResearchPapers/>} />
           <Route path="/schemes" element={<Schemes/>} />
           <Route path="/faq" element={<Home/>} />
