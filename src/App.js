@@ -6,7 +6,7 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import MedicalCenters from './Components/MedicalCenters';
 import ResearchPapers from './Components/ResearchPapers';
-import GovernmentSchemes from './Components/Schemes';
+import Schemes from './Components/Schemes';
 import PatientCorner from './Components/PatientCorner';
 import Disease from './Components/disease';
 // import FAQ from './Components/Faq';
@@ -26,7 +26,7 @@ function App() {
           <Route path="/disease/:diseaseName" element={<Disease/>} />
           <Route path="/medical-centers" element={<MedicalCenters/>} />
           <Route path="/research-papers" element={<ResearchPapers/>} />
-          <Route path="/government-schemes" element={<GovernmentSchemes/>} />
+          <Route path="/schemes" element={<Schemes/>} />
           <Route path="/faq" element={<Home/>} />
           <Route path="/news" element={<Home/>} />
           <Route path="/contact-us" element={<Home/>} />

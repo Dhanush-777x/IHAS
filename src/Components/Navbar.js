@@ -13,7 +13,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isTop = window.scrollY < window.innerHeight;
+      const isTop = window.scrollY < 20;
       setIsScrolled(!isTop);
     };
 
@@ -50,7 +50,7 @@ const Navbar = () => {
           <Link to="/medical-centers" className="py-3 px-5 text-center text-gray-600 hover:text-black">Medical Centers</Link>
           <Link to="/research-papers" className="py-3 px-5 text-center text-gray-600 hover:text-black">Researchers</Link>
           <HashLink to="/news#NewsSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">News</HashLink>
-          <Link to="/government-schemes" className="py-3 px-5 text-center text-gray-600 hover:text-black">Schemes</Link>
+          <Link to="/schemes" className="py-3 px-5 text-center text-gray-600 hover:text-black">Schemes</Link>
           <HashLink to="/faq#faqSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">FAQ</HashLink>
           <HashLink to="/contact-us#footerSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">Contact Us</HashLink>
           </div>
@@ -96,7 +96,7 @@ const Navbar = () => {
         <Link to="/" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Healthcare Providers</Link>   
         <Link to="/medical-centers" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Medical Centers</Link> 
         <Link to="/research-papers" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Researchers</Link> 
-        <Link to="/" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Schemes</Link>
+        <Link to="/schemes" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Schemes</Link>
         <HashLink to="/contact-us#footerSection" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black">Contact Us</HashLink> 
         <Link to="" className="glassmorphism-button py-2 mx-10 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={toggleMenu}>
           <FontAwesomeIcon icon={faComments} className="mr-2" />

@@ -43,9 +43,9 @@ function Disease() {
 
     return (
         <div className="mt-10 md:mt-40">
-            <h1 className="text-center text-4xl font-bold my-8">{diseaseData.name}</h1>
-            <div className="flex flex-col md:flex-row p-5 md:p-20">
-                <div className="md:w-1/3 mb-5 md:mb-0 bg-white bg-opacity-70 backdrop-blur-lg rounded-lg shadow-lg border-2 h-full">
+            <h1 className="text-center text-4xl font-bold mt-40">{diseaseData.name}</h1>
+            <div className="flex flex-col lg:flex-row p-5 md:p-20">
+                <div className="lg:w-1/3 mb-5 lg:mb-10 bg-white bg-opacity-70 backdrop-blur-lg rounded-lg shadow-lg border-2 h-full">
                     <div className="flex flex-col space-y-2">
                         <button
                             type="button"
@@ -79,7 +79,7 @@ function Disease() {
                     </div>
                 </div>
 
-                <div className="md:w-2/3 lg:ml-10">
+                <div className="lg:w-2/3 lg:ml-10">
                     <div className="p-4 bg-white bg-opacity-50 backdrop-blur-lg rounded-lg shadow-lg text-left">
                         {activeTab === 1 && (
                             <p className='py-10'>
