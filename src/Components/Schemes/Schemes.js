@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ChatWithAIButton from './chatWithai';
+import ChatWithAIButton from '../chatWithai';
 
 function Schemes() {
   const [schemes, setSchemes] = useState([]);

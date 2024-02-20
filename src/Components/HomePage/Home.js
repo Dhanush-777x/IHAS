@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
 import { faFlask } from '@fortawesome/free-solid-svg-icons/faFlask';
-import ChatWithAIButton from './chatWithai';
+import ChatWithAIButton from '../chatWithai';
 
 function Home() {
     return (

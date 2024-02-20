@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import AllDiseases from './AllDiseases';
-import MedicalCenters from './MedicalCenters';
-import Footer from './Footer';
-import Pharmacies from './pharmacies';
-import ChatWithAIButton from './chatWithai';
+import Footer from '../HomePage/Footer';
+import ChatWithAIButton from '../chatWithai';
+import ConferenceScraper from './conference';
 
-function PatientCorner() {
+function Healthcare() {
   const [activeTab, setActiveTab] = useState(1);
 
   useEffect(() => {
@@ -17,25 +15,26 @@ function PatientCorner() {
   };
 
   return (
+    <div>
     <div className="p-8 mt-40">
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mb-8">
         <button
           className={`rounded-lg py-4 px-4 text-lg ${activeTab === 1 ? 'bg-black text-white' : 'bg-gray-200'}`}
           onClick={() => handleTabChange(1)}
         >
-          Diseases
+          Guidelines
         </button>
         <button
           className={`rounded-lg py-4 px-4 text-lg ${activeTab === 2 ? 'bg-black text-white' : 'bg-gray-200'}`}
           onClick={() => handleTabChange(2)}
         >
-          Medical Centres
+          Medical Conferences
         </button>
         <button
           className={`rounded-lg py-4 px-4 text-lg ${activeTab === 3 ? 'bg-black text-white' : 'bg-gray-200'}`}
           onClick={() => handleTabChange(3)}
         >
-          Pharmacies and Medical Stores
+          E-books
         </button>
       </div>
 
@@ -43,28 +42,30 @@ function PatientCorner() {
         {/* Content for Tab 1 */}
         {activeTab === 1 && (
           <div>
-            <AllDiseases />
+            hi
           </div>
         )}
 
         {/* Content for Tab 2 */}
         {activeTab === 2 && (
           <div>
-            <MedicalCenters />
+            <ConferenceScraper/>
           </div>
         )}
 
         {/* Content for Tab 3 */}
         {activeTab === 3 && (
           <div>
-            <Pharmacies />
+            hi
           </div>
         )}
       </div>
-      <Footer />
+      
       <ChatWithAIButton/>
+    </div>
+    <Footer />
     </div>
   );
 }
 
-export default PatientCorner;
+export default Healthcare;

@@ -2,18 +2,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import './App.css';
-import Navbar from './Components/Navbar';
-import Home from './Components/Home';
-import MedicalCenters from './Components/MedicalCenters';
+import Navbar from './Components/Navbar/Navbar';
+import Home from './Components/HomePage/Home';
+import MedicalCenters from './Components/PatientsCorner/MedicalCenters';
 import ResearchPapers from './Components/ResearchPapers';
-import Schemes from './Components/Schemes';
-import PatientCorner from './Components/PatientCorner';
-import Disease from './Components/disease';
-import ConferenceScraper from './Components/Healthcare';
-// import FAQ from './Components/Faq';
-// import News from './Components/News';
-// import ContactUs from './Components/ContactUs';
-// import Chat from './Components/Chat';
+import Schemes from './Components/Schemes/Schemes';
+import PatientCorner from './Components/PatientsCorner/PatientCorner';
+import Disease from './Components/PatientsCorner/disease';
+import Healthcare from './Components/HealthcareProviders/healthcare';
 
 function App() {
   return (
@@ -26,7 +22,7 @@ function App() {
           <Route path="/patient-corner" element={<PatientCorner/>} />
           <Route path="/disease/:diseaseName" element={<Disease/>} />
           <Route path="/medical-centers" element={<MedicalCenters/>} />
-          <Route path="/healthcare-providers" element={<ConferenceScraper/>} />
+          <Route path="/healthcare-providers" element={<Healthcare/>} />
           <Route path="/research-papers" element={<ResearchPapers/>} />
           <Route path="/schemes" element={<Schemes/>} />
           <Route path="/faq" element={<Home/>} />

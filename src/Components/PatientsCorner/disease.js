@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import ChatWithAIButton from './chatWithai';
+import ChatWithAIButton from '../chatWithai';
 
 function Disease() {
     const { diseaseName } = useParams();
