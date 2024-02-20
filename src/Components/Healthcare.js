@@ -19,7 +19,7 @@ const ConferenceScraper = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://academicworldresearch.org/search.php?categories=&location=&date=');
+                const response = await axios.get('https://academicworldresearch.org/search.php?categories=Medical&location=&date=');
                 const data = response.data;
                 const $ = cheerio.load(data);
                 const conferenceData = [];
