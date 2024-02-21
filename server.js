@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-const api_key = '3018ce951102942258f6aeb445eaf00aa76be24ca95d9474faf00822b803c8c5';
+const api_key = '6f4b51539f2fc88cc191f52c884143e7d7182b0ad18b8f4b22d197a7e212d138';
 
 app.get('/api/research-papers', async (req, res) => {
     try {
