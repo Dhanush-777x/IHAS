@@ -7,7 +7,7 @@ function Healthcare() {
   const [activeTab, setActiveTab] = useState(1);
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
   }, []);
 
   const handleTabChange = (tabIndex) => {
@@ -39,21 +39,19 @@ function Healthcare() {
       </div>
 
       <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 mb-20">
-        {/* Content for Tab 1 */}
+
         {activeTab === 1 && (
           <div>
             hi
           </div>
         )}
 
-        {/* Content for Tab 2 */}
         {activeTab === 2 && (
           <div>
             <ConferenceScraper/>
           </div>
         )}
 
-        {/* Content for Tab 3 */}
         {activeTab === 3 && (
           <div>
             hi

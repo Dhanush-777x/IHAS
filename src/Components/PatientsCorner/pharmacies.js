@@ -6,7 +6,7 @@ const Pharmacies = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    // Load Google Maps API script
+
     const googleMapScript = document.createElement('script');
     googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=&libraries=places`;
     // AIzaSyC1er3X-G0P4ux1L9Pilcw3e6FciTwMrXM
@@ -20,7 +20,7 @@ const Pharmacies = () => {
   }, []);
 
   const initMap = () => {
-    const userLocation = { lat: 0, lng: 0 }; // Default center
+    const userLocation = { lat: 0, lng: 0 };
 
     const newMap = new window.google.maps.Map(document.getElementById('map'), {
       zoom: 14,
@@ -29,15 +29,13 @@ const Pharmacies = () => {
 
     setMap(newMap);
 
-    // Get user's current location
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         position => {
           const { latitude, longitude } = position.coords;
           const userLocation = { lat: latitude, lng: longitude };
           newMap.setCenter(userLocation);
-
-          // Search for nearby hospitals
           const request = {
             location: userLocation,
             radius: '5000',
@@ -56,7 +54,7 @@ const Pharmacies = () => {
                   title: place.name,
                 });
                 marker.addListener('click', () => {
-                  newMap.setZoom(18); // Zoom to level 18
+                  newMap.setZoom(18);
                   newMap.setCenter(marker.getPosition());
                 });
               }

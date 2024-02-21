@@ -3,59 +3,57 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0; /* Remove default body margin */
+    margin: 0;
 }
 
 .app-container {
     background: #f3f3ff;
-    min-height: 100vh; /* Use 100vh for full viewport height */
+    min-height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: column; /* Align children vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    position: relative; /* Added for absolute positioning of .circle */
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    position: relative; 
 }
 
 .circle {
-    position: absolute; /* Position absolutely */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center the element */
-    width: 80%; /* Adjusted width for better responsiveness */
-    max-width: 750px; /* Added max-width to limit size on larger screens */
-    height: 60vw; /* Adjusted height to maintain aspect ratio */
-    max-height: 750px; /* Added max-height to limit size on larger screens */
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 750px;
+    height: 60vw;
+    max-height: 750px;
     background: linear-gradient(to bottom, #fa39ad 40%, #fe6c4c 50%);
     filter: blur(120px);
 }
 
 .hero-text {
-    font-size: 3vw; /* Responsive font size */
-    z-index: 1; /* Ensure text is above the circle */
-    text-align: center; /* Center the text */
+    font-size: 3vw; 
+    z-index: 1;
+    text-align: center; 
     color: #000;
 }
 
-/* Home.css */
-
 .hero-text {
-    font-size: 4rem; /* Default font size for larger devices */
+    font-size: 4rem;
   }
 
-/* Media query for smaller screens */
+
 @media (max-width: 768px) {
     .circle {
-        width: 100%; /* Adjusted width for smaller screens */
-        height: 100vh; /* Adjusted height for smaller screens */
+        width: 100%; 
+        height: 100vh; 
     }
     .hero-text {
-        font-size: 0.2rem; /* Adjust the font size as needed */
+        font-size: 0.2rem; 
       }
 }
 @media (max-width: 1024px) {
     .hero-text {
-        font-size: 1.5rem; /* Adjust the font size as needed */
+        font-size: 1.5rem;
       }
 }
 /* Home.css */
@@ -66,7 +64,7 @@ body {
 }
 
 .levitate {
-    animation: levitate 2s ease-in-out infinite; /* Adjust duration and timing function as needed */
+    animation: levitate 2s ease-in-out infinite;
 }
 
 
@@ -74,22 +72,14 @@ body {
     background-color: #f3f3ff;
 }
 
-/* Home.css */
-
 .card {
     max-width: 400px;
     padding: 40px;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.85);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    /* transition: all 0.3s ease-in-out;
-    transform-style: preserve-3d; */
-}
 
-/* .card:hover {
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
-    transform: translateY(-4px) rotateX(4deg) rotateY(2deg);
-} */
+}
 
 .glassmorphism {
     background-color: rgba(255, 255, 255, 0.3);

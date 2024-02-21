@@ -49,9 +49,7 @@ function Schemes() {
         <h1 className='text-4xl font-bold mt-40'>Government Schemes</h1>
       </div>
       <div className="flex flex-col md:flex-row mt-10 lg:mx-20">
-        {/* Filter Tab Section */}
         <div className="w-full md:w-1/4 p-4 my-10">
-          {/* Search bar */}
           <input
             type="text"
             placeholder="Search schemes..."
@@ -85,7 +83,6 @@ function Schemes() {
           
         </div>
 
-        {/* Scheme Cards Section */}
         <div className="w-full md:w-3/4 p-4 flex flex-wrap justify-center">
           {filteredSchemes.map((scheme, index) => (
             <div key={index} className="w-full p-4">
@@ -94,7 +91,6 @@ function Schemes() {
                 <p className="text-gray-700 mb-10">{scheme.description}</p>
                 <a href={scheme.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline absolute bottom-4 left-4 text-right">
                   Learn More
-                  {/* Right arrow SVG icon */}
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

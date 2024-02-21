@@ -5,7 +5,7 @@ const ResearchPapers = () => {
     const [papers, setPapers] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState('');
-    const itemsPerPage = 10; // Number of items per page
+    const itemsPerPage = 10;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -26,8 +26,8 @@ const ResearchPapers = () => {
             }
         };
 
-        fetchData(); // Call fetchData inside useEffect
-    }, [currentPage, searchQuery]); // Include fetchData in the dependency array
+        fetchData();
+    }, [currentPage, searchQuery]);
 
     const nextPage = () => {
         setCurrentPage(currentPage + 1);
@@ -39,7 +39,7 @@ const ResearchPapers = () => {
 
     const handleSearch = (e) => {
         setSearchQuery(e.target.value);
-        setCurrentPage(1); // Reset to first page when searching
+        setCurrentPage(1);
     };
 
     return (

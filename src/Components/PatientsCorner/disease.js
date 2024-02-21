@@ -10,20 +10,17 @@ function Disease() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // Fetch data from the JSON file
                 const response = await fetch('https://dhanush-777x.github.io/json-api/db.json');
                 if (!response.ok) {
                     throw new Error('Failed to fetch disease data');
                 }
                 const data = await response.json();
                 console.log(data);
-                // Find the disease by name in the diseases array
                 const disease = data.find(disease => disease.name === diseaseName);
                 if (!disease) {
                     throw new Error('Disease not found');
                 }
 
-                // Set the disease data in the state
                 setDiseaseData(disease);
             } catch (error) {
                 console.error('Error fetching data:', error);

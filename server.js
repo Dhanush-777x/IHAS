@@ -1,10 +1,18 @@
+const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(express.json());
+app.use(cors());
 
 const api_key = '3018ce951102942258f6aeb445eaf00aa76be24ca95d9474faf00822b803c8c5';
 
-exports.handler = async (event, context) => {
+app.get('/api/research-papers', async (req, res) => {
     try {
-        const { start, num, search } = event.queryStringParameters;
+        const { start, num, search } = req.query;
         const base_serpapi_url = `https://serpapi.com/search.json?engine=google_scholar&q=${search}&api_key=${api_key}`;
         const serpapi_url = `${base_serpapi_url}&start=${start}&num=${num}`;
         const response = await axios.get(serpapi_url);
@@ -14,15 +22,13 @@ exports.handler = async (event, context) => {
             description: result.snippet,
             link: result.link
         }));
-        return {
-            statusCode: 200,
-            body: JSON.stringify(papers)
-        };
+        res.json(papers);
     } catch (error) {
         console.error('Error fetching data:', error.message);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ error: 'Failed fetching data' })
-        };
+        res.status(500).json({ error: 'Failed fetching data' });
     }
-};
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});

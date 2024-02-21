@@ -11,10 +11,10 @@ const News = () => {
           params: {
             country: 'us',
             category: 'health',
-            apiKey: '7b0d8cbdc40c464d8630f3e1ef0fdf3' // Replace 'YOUR_NEWS_API_KEY' with your actual News API key
+            apiKey: '7b0d8cbdc40c464d8630f3e1ef0fdf3'
           }
         });
-        setNews(response.data.articles.slice(0, 8)); // Limit to 8 news articles
+        setNews(response.data.articles.slice(0, 8));
       } catch (error) {
         console.error('Error fetching news:', error);
       }
