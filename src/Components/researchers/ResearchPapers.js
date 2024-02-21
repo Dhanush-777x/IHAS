@@ -8,26 +8,26 @@ const ResearchPapers = () => {
     const itemsPerPage = 10; // Number of items per page
 
     useEffect(() => {
-        fetchData();
-    }, [currentPage, searchQuery]); // Trigger fetch data when currentPage or searchQuery changes
+        const fetchData = async () => {
+            try {
+                let apiUrl = `http://localhost:5000/api/research-papers?start=${(currentPage - 1) * itemsPerPage}&num=${itemsPerPage}`;
+                if (searchQuery) {
+                    apiUrl += `&search=${searchQuery}`;
+                }
+                const response = await axios.get(apiUrl);
+                if (response.status === 200) {
+                    setPapers(response.data || []);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    throw new Error('Failed fetching data');
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error.message);
+            }
+        };
 
-    const fetchData = async () => {
-        try {
-            let apiUrl = `http://localhost:5000/api/research-papers?start=${(currentPage - 1) * itemsPerPage}&num=${itemsPerPage}`;
-            if (searchQuery) {
-                apiUrl += `&search=${searchQuery}`;
-            }
-            const response = await axios.get(apiUrl);
-            if (response.status === 200) {
-                setPapers(response.data || []);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else {
-                throw new Error('Failed fetching data');
-            }
-        } catch (error) {
-            console.error('Error fetching data:', error.message);
-        }
-    };
+        fetchData(); // Call fetchData inside useEffect
+    }, [currentPage, searchQuery]); // Include fetchData in the dependency array
 
     const nextPage = () => {
         setCurrentPage(currentPage + 1);
