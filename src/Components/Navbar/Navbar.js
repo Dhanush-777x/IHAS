@@ -48,7 +48,7 @@ const Navbar = () => {
           <HashLink to="/home#Section1" className="py-3 px-5 text-center text-gray-600 hover:text-black">Home</HashLink>
           <Link to="/patient-corner" className="py-3 px-5 text-center text-gray-600 hover:text-black">Patient's Corner</Link>
           <Link to="/healthcare-providers" className="py-3 px-5 text-center text-gray-600 hover:text-black">Healthcare Providers</Link>
-          <Link to="/research-papers" className="py-3 px-5 text-center text-gray-600 hover:text-black">Researchers</Link>
+          <Link to="/research" className="py-3 px-5 text-center text-gray-600 hover:text-black">Researchers</Link>
           <HashLink to="/news#NewsSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">News</HashLink>
           <Link to="/schemes" className="py-3 px-5 text-center text-gray-600 hover:text-black">Schemes</Link>
           <HashLink to="/faq#faqSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">FAQ</HashLink>
@@ -88,7 +88,7 @@ const Navbar = () => {
             <Link to="/home" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Home</Link>
             <Link to="/patient-corner" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Patient's Corner</Link>
             <Link to="/healthcare-providers" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Healthcare Providers</Link>
-            <Link to="/research-papers" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Researchers</Link>
+            <Link to="/research" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Researchers</Link>
             <Link to="/schemes" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Schemes</Link>
             <HashLink to="/contact-us#footerSection" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Contact Us</HashLink>
           </motion.div>

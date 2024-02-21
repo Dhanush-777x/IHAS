@@ -58,7 +58,7 @@ function Home() {
                         <div className="icon-container">
                             <FontAwesomeIcon icon={faUserMd} className="features-icon" />
                         </div>
-                        <h2 className="text-lg font-semibold mb-2">Doctors</h2>
+                        <h2 className="text-lg font-semibold mb-2">Healthcare Providers</h2>
                         <p className="text-gray-700 mb-8">Explore advanced medical equipment and surgical procedures for effective patient care.</p>
                         <Link to="/patient-corner" className="glassmorphism-button py-2 my-10 mx-10 text-center text-gray-700 hover:text-black hover:shadow-2xl lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black"
                             whileHover={{ scale: 1.05 }}

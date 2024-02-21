@@ -20,7 +20,7 @@ const ConferenceScraper = () => {
         const fetchData = async () => {
             try {
                 setIsLoading(true); // Set loading state to true when fetching data
-                const response = await axios.get('https://academicworldresearch.org/search.php?categories=Medical&location=&date=');
+                const response = await axios.get('https://academicworldresearch.org/search.php?categories=health&location=india&date=&gad_source=1');
                 const data = response.data;
                 const $ = cheerio.load(data);
                 const conferenceData = [];
