@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-function AllDiseases() {
+function NonComm() {
   const [searchTerm, setSearchTerm] = useState('');
   const [diseases, setDiseases] = useState([]);
 
@@ -60,4 +60,4 @@ function AllDiseases() {
   );
 }
 
-export default AllDiseases;
+export default NonComm;

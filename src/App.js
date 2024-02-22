@@ -10,6 +10,9 @@ import Schemes from './Components/Schemes/Schemes';
 import PatientCorner from './Components/PatientsCorner/PatientCorner';
 import Disease from './Components/PatientsCorner/disease';
 import Healthcare from './Components/HealthcareProviders/healthcare';
+import VectorBorne from './Components/PatientsCorner/CategoriesFolder/VectorBorne';
+import NonComm from './Components/PatientsCorner/CategoriesFolder/NonComm';
+import Mch from './Components/PatientsCorner/CategoriesFolder/Mch';
 
 function App() {
   return (
@@ -20,10 +23,16 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/patient-corner" element={<PatientCorner />} />
+
+          {/* categories */}
+          <Route path="/vector-borne-diseases" element={<VectorBorne />} />
+          <Route path="/non-communicable-diseases" element={<NonComm />} />
+          <Route path="/maternal-child-health" element={<Mch />} />
+
           <Route path="/disease/:diseaseName" element={<Disease />} />
           <Route path="/medical-centers" element={<MedicalCenters />} />
           <Route path="/healthcare-providers" element={<Healthcare />} />
-          <Route path="/research" element={<ResearchPapers />} /> {/* Render ResearchPapers component at the /research route */}
+          <Route path="/research" element={<ResearchPapers />} />
           <Route path="/schemes" element={<Schemes />} />
           <Route path="/faq" element={<Home />} />
           <Route path="/news" element={<Home />} />

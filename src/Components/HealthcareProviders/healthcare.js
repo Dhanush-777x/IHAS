@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Footer from '../HomePage/Footer';
 import ChatWithAIButton from '../chatWithai';
 import ConferenceScraper from './conference';
+import BookSearch from './BookSearch';
 
 function Healthcare() {
   const [activeTab, setActiveTab] = useState(1);
@@ -54,7 +55,7 @@ function Healthcare() {
 
         {activeTab === 3 && (
           <div>
-            hi
+            <BookSearch/>
           </div>
         )}
       </div>

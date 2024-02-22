@@ -71,8 +71,18 @@ function Disease() {
                                 } ${activeTab !== 3 ? 'hover:bg-secondary' : ''}`}
                             onClick={() => handleTabClick(3)}
                         >
-                            Treatment
+                            Risk Factors
                             {activeTab === 3 && <div className="w-1 h-full bg-blue-500 opacity-30 rounded-r-lg"></div>}
+                        </button>
+
+                        <button
+                            type="button"
+                            className={`py-6 px-4 text-sm rounded-lg focus:outline-none flex items-center justify-between ${activeTab === 4 ? 'text-white bg-black' : ''
+                                } ${activeTab !== 4 ? 'hover:bg-secondary' : ''}`}
+                            onClick={() => handleTabClick(4)}
+                        >
+                            Ayush
+                            {activeTab === 4 && <div className="w-1 h-full bg-blue-500 opacity-30 rounded-r-lg"></div>}
                         </button>
 
                     </div>
@@ -82,49 +92,60 @@ function Disease() {
                     <div className="p-4 bg-white bg-opacity-50 backdrop-blur-lg rounded-lg shadow-lg text-left">
                         {activeTab === 1 && (
                             <p className='py-10'>
-                                <span className='text-2xl font-semibold'>{diseaseData.name}: Overview</span> <br /> <br />
+                                <span className='text-2xl font-semibold text-primary'>{diseaseData.name}: Overview</span> <br /> <br />
                                 {diseaseData.Overview} <br /> <br /> <br />
-                                <span className='text-2xl font-semibold'>Types</span> <br /> <br />
+                                {diseaseData.fact1} <br />
+                                {diseaseData.fact2} <br />
+                                {diseaseData.fact3} <br /> <br /> <br />
+                                <span className='text-2xl font-semibold text-primary'>Types</span> <br /> <br />
                                 {diseaseData.type1} <br /> <br />
                                 {diseaseData.type2} <br /> <br /> <br />
-                                <span className='text-2xl font-semibold'>Facts</span> <br /> <br />
-                                {diseaseData.facts} <br /> <br /> <br />
-                                <span className='text-2xl font-semibold'>Period of Communicability</span> <br /> <br />
-                                {diseaseData.period}<br /> <br /> <br />
-
-                                <br /> <br />
-                                <br /> <br />
-                                <br /> <br />
                             </p>
                         )}
                         {activeTab === 2 && (
                             <p className='py-10'>
-                                <span className='text-2xl font-semibold'>Preventive Measures</span> <br /> <br />
-                                {diseaseData.measure1}<br /> <br />
-                                {diseaseData.measure2}<br /> <br />
-                                {diseaseData.measure3}<br /> <br />
-                                {diseaseData.measure4}<br /> <br />
-                                {diseaseData.measure5}<br /> <br />
-                                {diseaseData.measure6}<br /> <br />
-                                {diseaseData.measure7}<br /> <br />
+                                <span className='text-2xl font-semibold text-primary'>Preventive Measures</span> <br /> <br />
+                                <strong>1. {diseaseData.measure1title}</strong><br />
+                                {diseaseData.measure1description}<br /> <br />
+                                <strong>2. {diseaseData.measure2title}</strong><br />
+                                {diseaseData.measure2description}<br /> <br />
+                                <strong>3. {diseaseData.measure3title}</strong><br />
+                                {diseaseData.measure3description}<br /> <br />
+                                <strong>4. {diseaseData.measure4title}</strong><br />
+                                {diseaseData.measure4description}<br /> <br />
+                                <strong>5. {diseaseData.measure5title}</strong><br />
+                                {diseaseData.measure5description}<br /> <br />
+                                <strong>6. {diseaseData.measure6title}</strong> <br />
+                                {diseaseData.measure6description}<br /> <br />
+                                <strong>7. {diseaseData.measure7title}</strong><br />
+                                {diseaseData.measure7description}<br /> <br />
                             </p>
                         )}
                         {activeTab === 3 && (
                             <p>
-                                <span className='text-2xl font-semibold'>Do's</span> <br /> <br />
-                                {diseaseData.do} <br /> <br /> <br />
-                                <span className='text-2xl font-semibold'>Dont's</span> <br /> <br />
-                                {diseaseData.dont} <br /> <br /> <br />
-                                <span className='text-2xl font-semibold'>Risk Factors</span> <br /> <br />
-                                {diseaseData.risk} <br /> <br /> <br />
-                                <span className='text-2xl font-semibold'>Specialists</span> <br /> <br />
-                                {diseaseData.specialists}<br /> <br /> <br />
-                                <span className='text-2xl font-semibold'>Ayush</span> <br /> <br />
-                                {diseaseData.ayush}<br /> <br /> <br />
+                                <span className='text-2xl font-semibold text-primary'>Risk Factors</span> <br /> <br />
+                                {diseaseData.risk1} <br /> <br /> 
+                                {diseaseData.risk2} <br /> <br />
+                                {diseaseData.risk3} <br /> <br />
+                                {diseaseData.risk4}<br /> <br />
+                                {diseaseData.risk5}<br /> <br />
+                                {diseaseData.risk6}<br /> <br />
+                                {diseaseData.risk7}<br /> <br />
                                 <br /> <br />
                                 <br /> <br />
                                 <br /> <br />
                             </p>
+                        )}
+                        {activeTab === 4 && (
+                            <p className='py-10'>
+                            <span className='text-2xl font-semibold text-primary'>Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy</span> <br /> <br />
+                            <strong>1. {diseaseData.ayush1.title}</strong><br />
+                            {diseaseData.ayush1.description}<br /> <br />
+                            <strong>2. {diseaseData.ayush2.title}</strong><br />
+                            {diseaseData.ayush2.description}<br /> <br />
+                            <strong>3. {diseaseData.ayush3.title}</strong><br />
+                            {diseaseData.ayush3.description}<br /> <br />
+                        </p>
                         )}
                     </div>
                 </div>
