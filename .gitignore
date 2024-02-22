@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/prakriti
+prakriti/
 /.pnp
 .pnp.js
 
