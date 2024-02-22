@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-function MchGuidelines() {
+function DiabetesGuidelines() {
   const [guidelines, setGuidelines] = useState([]);
 
   useEffect(() => {
-    fetch('https://dhanush-777x.github.io/json-api/MchGuidelines.json')
+    fetch('https://dhanush-777x.github.io/json-api/diabetesGuidelines.json')
       .then(response => response.json())
       .then(data => setGuidelines(data))
       .catch(error => console.error('Error fetching guidelines:', error));
@@ -12,7 +12,7 @@ function MchGuidelines() {
 
   return (
     <div className='mt-40'>
-      <h1 className='text-3xl font-semibold'>Standard Guidelines for Maternal and Childcare</h1>
+      <h1 className='text-3xl font-semibold'>Standard Guidelines for Diabetes</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mx-20">
       {guidelines.map((guideline, index) => (
         <div key={index} className="bg-gray-100 p-4 rounded-lg shadow-md">
@@ -26,4 +26,4 @@ function MchGuidelines() {
   );
 }
 
-export default MchGuidelines;
+export default DiabetesGuidelines;

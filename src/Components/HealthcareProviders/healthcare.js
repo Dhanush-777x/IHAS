@@ -4,6 +4,7 @@ import ChatWithAIButton from '../chatWithai';
 import ConferenceScraper from './conference';
 import BookSearch from './BookSearch';
 import Guidelines from './Guidelines';
+import LanguageBtn from '../Language';
 
 function Healthcare() {
   const [activeTab, setActiveTab] = useState(1);
@@ -60,7 +61,7 @@ function Healthcare() {
           </div>
         )}
       </div>
-      
+      <LanguageBtn/>
       <ChatWithAIButton/>
     </div>
     <Footer />

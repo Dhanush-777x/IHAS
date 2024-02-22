@@ -4,7 +4,7 @@ function VectorBorneGuidelines() {
   const [guidelines, setGuidelines] = useState([]);
 
   useEffect(() => {
-    fetch('https://dhanush-777x.github.io/json-api/VectorBorne.json')
+    fetch('https://dhanush-777x.github.io/json-api/VectorBorneGuidelines.json')
       .then(response => response.json())
       .then(data => setGuidelines(data))
       .catch(error => console.error('Error fetching guidelines:', error));

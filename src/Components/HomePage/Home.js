@@ -10,6 +10,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
 import { faFlask } from '@fortawesome/free-solid-svg-icons/faFlask';
 import ChatWithAIButton from '../chatWithai';
+import LanguageBtn from '../Language';
 
 function Home() {
     return (
@@ -76,13 +77,16 @@ function Home() {
                         </div>
                         <h2 className="text-lg font-semibold mb-2">Researchers</h2>
                         <p className="text-gray-700 mb-9">Access a repository of research papers and contribute to advancements in medical science.</p>
-                        <Link to="" className="glassmorphism-button py-2 my-10 mx-10 text-center text-gray-700 hover:text-black hover:shadow-2xl lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black"
+                        <Link to="/research" className="glassmorphism-button py-2 my-10 mx-10 text-center text-gray-700 hover:text-black hover:shadow-2xl lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black"
                             whileHover={{ scale: 1.05 }}
                         >
                             View More
                         </Link>
                     </motion.div>
                 </div>
+            </motion.div>
+            <motion.div className="fixed bottom-20 right-20">
+                <LanguageBtn/>
             </motion.div>
             <News/>
             <FAQ />

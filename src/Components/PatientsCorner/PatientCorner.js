@@ -4,6 +4,7 @@ import Footer from '../HomePage/Footer';
 import Pharmacies from './pharmacies';
 import ChatWithAIButton from '../chatWithai';
 import DiseaseCategories from './DiseaseCategories';
+import LanguageBtn from '../Language';
 
 function PatientCorner() {
   const [activeTab, setActiveTab] = useState(1);
@@ -58,6 +59,7 @@ function PatientCorner() {
         )}
       </div>
       <Footer />
+      <LanguageBtn/>
       <ChatWithAIButton/>
     </div>
   );

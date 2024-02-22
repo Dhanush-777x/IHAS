@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ChatWithAIButton from '../chatWithai';
+import LanguageBtn from '../Language';
 
 const ResearchPapers = () => {
     const [papers, setPapers] = useState([]);
@@ -68,6 +70,8 @@ const ResearchPapers = () => {
                     <button onClick={nextPage} className="px-4 py-2 bg-primary text-white rounded-md cursor-pointer">&gt;</button>
                 </div>
             </div>
+            <LanguageBtn/>
+            <ChatWithAIButton/>
         </div>
     );
 };

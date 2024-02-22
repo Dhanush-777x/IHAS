@@ -10,7 +10,9 @@ import Schemes from './Components/Schemes/Schemes';
 import PatientCorner from './Components/PatientsCorner/PatientCorner';
 import Healthcare from './Components/HealthcareProviders/healthcare';
 import VectorBorneGuidelines from './Components/HealthcareProviders/GuidelineCategories/VectorBorneGuidelines';
-// import MchGuidelines from './Components/HealthcareProviders/GuidelineCategories/MchGuidelines';
+import MchGuidelines from './Components/HealthcareProviders/GuidelineCategories/MchGuidelines';
+import DiabetesGuidelines from './Components/HealthcareProviders/GuidelineCategories/DiabetesGuidelines';
+
 
 function App() {
   return (
@@ -27,6 +29,9 @@ function App() {
 
           {/* Guideline Categories */}
           <Route path="/vector-borne-diseases-guidelines" element={<VectorBorneGuidelines />} />
+          <Route path="/maternal-childcare-guidelines" element={<MchGuidelines />} />
+          <Route path="/diabetes-guidelines" element={<DiabetesGuidelines />} />
+          
 
           <Route path="/research" element={<ResearchPapers />} />
           <Route path="/schemes" element={<Schemes />} />

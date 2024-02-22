@@ -66,7 +66,7 @@ const DiseaseCategories = () => {
     return (
         <div className="flex flex-wrap justify-center items-center mt-8 lg:mx-60">
             {diseases.map((disease, index) => (
-                <div key={index} className="w-full rounded overflow-hidden shadow-lg mx-4 my-4 cursor-pointer text-left" onClick={() => handleDiseaseClick(disease.heading)}>
+                <div key={index} className="w-full rounded overflow-hidden shadow-lg mx-4 my-4 cursor-pointer text-left transition-transform duration-300 transform hover:scale-105" onClick={() => handleDiseaseClick(disease.heading)}>
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">{disease.heading}</div>
                     </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ChatWithAIButton from '../chatWithai';
+import LanguageBtn from '../Language';
 
 function Schemes() {
   const [schemes, setSchemes] = useState([]);
@@ -100,6 +101,8 @@ function Schemes() {
           ))}
         </div>
       </div>
+      <LanguageBtn/>
+      <ChatWithAIButton/>
     </div>
   );
 }
