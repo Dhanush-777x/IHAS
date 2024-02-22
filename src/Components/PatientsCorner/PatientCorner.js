@@ -3,7 +3,7 @@ import MedicalCenters from './MedicalCenters';
 import Footer from '../HomePage/Footer';
 import Pharmacies from './pharmacies';
 import ChatWithAIButton from '../chatWithai';
-import Categories from './categories';
+import DiseaseCategories from './DiseaseCategories';
 
 function PatientCorner() {
   const [activeTab, setActiveTab] = useState(1);
@@ -42,7 +42,7 @@ function PatientCorner() {
       <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 mb-20">
         {activeTab === 1 && (
           <div>
-            <Categories/>
+            <DiseaseCategories/>
           </div>
         )}
 

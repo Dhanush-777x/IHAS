@@ -3,6 +3,7 @@ import Footer from '../HomePage/Footer';
 import ChatWithAIButton from '../chatWithai';
 import ConferenceScraper from './conference';
 import BookSearch from './BookSearch';
+import Guidelines from './Guidelines';
 
 function Healthcare() {
   const [activeTab, setActiveTab] = useState(1);
@@ -43,7 +44,7 @@ function Healthcare() {
 
         {activeTab === 1 && (
           <div>
-            hi
+            <Guidelines/>
           </div>
         )}
 

@@ -8,11 +8,9 @@ import MedicalCenters from './Components/PatientsCorner/MedicalCenters';
 import ResearchPapers from './Components/researchers/ResearchPapers'; // Import the ResearchPapers component
 import Schemes from './Components/Schemes/Schemes';
 import PatientCorner from './Components/PatientsCorner/PatientCorner';
-import Disease from './Components/PatientsCorner/disease';
 import Healthcare from './Components/HealthcareProviders/healthcare';
-import VectorBorne from './Components/PatientsCorner/CategoriesFolder/VectorBorne';
-import NonComm from './Components/PatientsCorner/CategoriesFolder/NonComm';
-import Mch from './Components/PatientsCorner/CategoriesFolder/Mch';
+import VectorBorneGuidelines from './Components/HealthcareProviders/GuidelineCategories/VectorBorneGuidelines';
+// import MchGuidelines from './Components/HealthcareProviders/GuidelineCategories/MchGuidelines';
 
 function App() {
   return (
@@ -24,14 +22,12 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/patient-corner" element={<PatientCorner />} />
 
-          {/* categories */}
-          <Route path="/vector-borne-diseases" element={<VectorBorne />} />
-          <Route path="/non-communicable-diseases" element={<NonComm />} />
-          <Route path="/maternal-child-health" element={<Mch />} />
-
-          <Route path="/disease/:diseaseName" element={<Disease />} />
           <Route path="/medical-centers" element={<MedicalCenters />} />
           <Route path="/healthcare-providers" element={<Healthcare />} />
+
+          {/* Guideline Categories */}
+          <Route path="/vector-borne-diseases-guidelines" element={<VectorBorneGuidelines />} />
+
           <Route path="/research" element={<ResearchPapers />} />
           <Route path="/schemes" element={<Schemes />} />
           <Route path="/faq" element={<Home />} />
