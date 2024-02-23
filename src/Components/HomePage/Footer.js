@@ -5,7 +5,7 @@ import logo from '../../Assets/logo.png';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 function Footer() {
   const [loaded, setLoaded] = useState(false);
-  const timer = setTimeout(() => {
+  setTimeout(() => {
     setLoaded(true);
   }, 500);
   return (

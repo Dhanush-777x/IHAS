@@ -12,8 +12,6 @@ import { faFlask } from '@fortawesome/free-solid-svg-icons/faFlask';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import ChatWithAIButton from '../chatWithai';
 import LanguageBtn from '../Language';
-import Links from '../Links';
-import Podcasts from '../Podcasts';
 
 function Home() {
     return (

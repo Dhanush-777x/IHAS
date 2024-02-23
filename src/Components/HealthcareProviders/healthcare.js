@@ -17,7 +17,7 @@ function Healthcare() {
     setActiveTab(tabIndex);
   };
 
-  const timer = setTimeout(() => {
+  setTimeout(() => {
     setLoaded(true);
   }, 500);
 
