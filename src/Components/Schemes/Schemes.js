@@ -9,7 +9,7 @@ function Schemes() {
   const [filterBenefit, setFilterBenefit] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [loaded, setLoaded] = useState(false);
-  const timer = setTimeout(() => {
+  setTimeout(() => {
     setLoaded(true);
   }, 500);
   useEffect(() => {
