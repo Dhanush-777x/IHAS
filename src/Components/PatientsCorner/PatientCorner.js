@@ -8,16 +8,9 @@ import LanguageBtn from '../Language';
 
 function PatientCorner() {
   const [activeTab, setActiveTab] = useState(1);
-  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-
-    const timer = setTimeout(() => {
-      setLoaded(true);
-    }, 100);
-
-    return () => clearTimeout(timer);
   }, []);
 
   const handleTabChange = (tabIndex) => {
