@@ -90,7 +90,8 @@ const Navbar = () => {
             <Link to="/healthcare-providers" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Healthcare Providers</Link>
             <Link to="/research" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Researchers</Link>
             <Link to="/schemes" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Schemes</Link>
-            <HashLink to="/contact-us#footerSection" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Contact Us</HashLink>
+            <Link to="/useful-links" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Links</Link>
+            <HashLink to="/helpline" className="py-2 pl-3 pr-4 text-center text-gray-700 hover:text-black lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black" onClick={closeMenu}>Helpline</HashLink>
           </motion.div>
         )}
       </AnimatePresence>

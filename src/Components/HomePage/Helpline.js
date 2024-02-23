@@ -12,7 +12,7 @@ const HelplineCard = ({ title, number }) => {
             <div className="max-w-xs mx-auto bg-white rounded-xl shadow-md overflow-hidden">
                 <div className="p-6 flex flex-col justify-between h-full">
                     <div>
-                        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{title}</div>
+                        <div className="uppercase tracking-wide text-sm text-primary font-semibold">{title}</div>
                         <div className="mt-2 text-gray-900 py-4">{number}</div>
                     </div>
                     <button onClick={handleCall} className="bg-primary text-white font-bold py-2 px-4 rounded-full flex items-center justify-center">
