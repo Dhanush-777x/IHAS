@@ -8,7 +8,10 @@ function Schemes() {
   const [filterLevel, setFilterLevel] = useState('all');
   const [filterBenefit, setFilterBenefit] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-
+  const [loaded, setLoaded] = useState(false);
+  const timer = setTimeout(() => {
+    setLoaded(true);
+  }, 500);
   useEffect(() => {
     fetch('https://dhanush-777x.github.io/json-api/schemes.json')
       .then(response => response.json())
@@ -44,7 +47,7 @@ function Schemes() {
   }, [filterLevel, filterBenefit, searchQuery, schemes]);
 
   return (
-    <div>
+    <div className={`transition-all duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
       <ChatWithAIButton/>
       <div>
         <h1 className='text-4xl font-bold mt-40'>Government Schemes</h1>

@@ -12,6 +12,8 @@ import Healthcare from './Components/HealthcareProviders/healthcare';
 import VectorBorneGuidelines from './Components/HealthcareProviders/GuidelineCategories/VectorBorneGuidelines';
 import MchGuidelines from './Components/HealthcareProviders/GuidelineCategories/MchGuidelines';
 import DiabetesGuidelines from './Components/HealthcareProviders/GuidelineCategories/DiabetesGuidelines';
+import Links from './Components/Links';
+import Helpline from './Components/HomePage/Helpline';
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
           <Route path="/medical-centers" element={<MedicalCenters />} />
           <Route path="/healthcare-providers" element={<Healthcare />} />
 
+          <Route path="/useful-links" element={<Links />} />
           {/* Guideline Categories */}
           <Route path="/vector-borne-diseases-guidelines" element={<VectorBorneGuidelines />} />
           <Route path="/maternal-childcare-guidelines" element={<MchGuidelines />} />
@@ -37,7 +40,7 @@ function App() {
           <Route path="/schemes" element={<Schemes />} />
           <Route path="/faq" element={<Home />} />
           <Route path="/news" element={<Home />} />
-          <Route path="/contact-us" element={<Home />} />
+          <Route path="/helpline" element={<Helpline />} />
           <Route path="/chat" element={<Home />} />
         </Routes>
       </div>

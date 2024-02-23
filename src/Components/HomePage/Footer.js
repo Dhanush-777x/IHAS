@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../Assets/logo.png';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 function Footer() {
+  const [loaded, setLoaded] = useState(false);
+  const timer = setTimeout(() => {
+    setLoaded(true);
+  }, 500);
   return (
-    <div>
+    <div className={`p-8 mt-40 transition-all duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
         <footer id='footerSection' className="footer-container mb-20">
                 <div className="footer-content">
 

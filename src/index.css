@@ -5,3 +5,18 @@
 html {
     scroll-behavior: smooth;
 }
+/* tailwind.css or index.css or any other CSS file where Tailwind CSS classes are defined */
+
+@keyframes fadeIn {
+    from {
+      translate: 0px 20px;
+    }
+    to {
+      translate: 0 0;
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 3s ease-in-out;
+  }
+  

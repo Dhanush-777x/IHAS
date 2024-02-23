@@ -6,11 +6,14 @@ import FAQ from './Faq';
 import Footer from './Footer';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faUserMd } from '@fortawesome/free-solid-svg-icons/faUserMd';
 import { faFlask } from '@fortawesome/free-solid-svg-icons/faFlask';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 import ChatWithAIButton from '../chatWithai';
 import LanguageBtn from '../Language';
+import Links from '../Links';
+import Podcasts from '../Podcasts';
 
 function Home() {
     return (
@@ -83,6 +86,39 @@ function Home() {
                             View More
                         </Link>
                     </motion.div>
+
+                    <motion.div
+                        className="card glassmorphism mx-3 mb-4 sm:w-80"
+                        whileHover={{ scale: 1.1 }}
+                    >
+                        <div className="icon-container">
+                            <FontAwesomeIcon icon={faLink} className='features-icon' />
+                        </div>
+                        <h2 className="text-lg font-semibold mb-2">Govt Websites</h2>
+                        <p className="text-gray-700 mb-9">Access essential government official websites redirecting to medical-related information and services.</p>
+                        <Link to="/research" className="glassmorphism-button py-2 my-10 mx-10 text-center text-gray-700 hover:text-black hover:shadow-2xl lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black"
+                            whileHover={{ scale: 1.05 }}
+                        >
+                            View More
+                        </Link>
+                        
+                    </motion.div>
+                    <motion.div
+                        className="card glassmorphism mx-3 mb-4 sm:w-80"
+                        whileHover={{ scale: 1.1 }}
+                    >
+                        <div className="icon-container">
+                            <FontAwesomeIcon icon={faPhone} className='features-icon' />
+                        </div>
+                        <h2 className="text-lg font-semibold mb-2">Helpline</h2>
+                        <p className="text-gray-700 mb-9">Emergency service Numbers dedicated to providing rapid medical assistance and transportation to individuals.</p>
+                        <Link to="/research" className="glassmorphism-button py-2 my-10 mx-10 text-center text-gray-700 hover:text-black hover:shadow-2xl lg:border-b lg:border-gray-100 lg:hover:bg-transparent lg:hover:black"
+                            whileHover={{ scale: 1.05 }}
+                        >
+                            View More
+                        </Link>
+                    </motion.div>
+
                 </div>
             </motion.div>
             <motion.div className="fixed bottom-20 right-20">

@@ -8,7 +8,10 @@ const ResearchPapers = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState('');
     const itemsPerPage = 10;
-
+    const [loaded, setLoaded] = useState(false);
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 500);
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -45,7 +48,7 @@ const ResearchPapers = () => {
     };
 
     return (
-        <div>
+        <div className={`transition-all duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
             <h1 className='mt-40 text-3xl font-semibold'>Research Papers</h1>
             <div className="mx-4 my-8">
                 <input

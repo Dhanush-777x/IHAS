@@ -51,8 +51,8 @@ const Navbar = () => {
           <Link to="/research" className="py-3 px-5 text-center text-gray-600 hover:text-black">Researchers</Link>
           <HashLink to="/news#NewsSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">News</HashLink>
           <Link to="/schemes" className="py-3 px-5 text-center text-gray-600 hover:text-black">Schemes</Link>
-          <HashLink to="/faq#faqSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">FAQ</HashLink>
-          <HashLink to="/contact-us#footerSection" className="py-3 px-5 text-center text-gray-600 hover:text-black">Contact Us</HashLink>
+          <HashLink to="/useful-links" className="py-3 px-5 text-center text-gray-600 hover:text-black">Links</HashLink>
+          <HashLink to="/helpline" className="py-3 px-5 text-center text-gray-600 hover:text-black">Helpline</HashLink>
         </div>
         <motion.button
           onClick={toggleMenu}

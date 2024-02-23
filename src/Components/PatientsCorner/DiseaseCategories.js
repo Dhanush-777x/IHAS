@@ -66,16 +66,16 @@ const DiseaseCategories = () => {
     return (
         <div className="flex flex-wrap justify-center items-center mt-8 lg:mx-60">
             {diseases.map((disease, index) => (
-                <div key={index} className="w-full rounded overflow-hidden shadow-lg mx-4 my-4 cursor-pointer text-left transition-transform duration-300 transform hover:scale-105" onClick={() => handleDiseaseClick(disease.heading)}>
+                <div key={index} className="w-full rounded overflow-hidden shadow-lg mx-4 my-4 cursor-pointer text-left animate-fade-in" style={{ animationDelay: `${index * 100}ms` }} onClick={() => handleDiseaseClick(disease.heading)}>
                     <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">{disease.heading}</div>
+                        <div className="font-bold text-xl mb-2 text-primary">{disease.heading}</div>
                     </div>
                 </div>
             ))}
 
             {modalOpen && (
                 <div className="fixed inset-0 z-50 overflow-auto bg-gray-900 bg-opacity-50 flex items-center justify-center">
-                    <div className="relative p-8 bg-white rounded-lg">
+                    <div className="relative p-8 bg-white rounded-lg max-h-full overflow-y-auto">
                         <button className="absolute top-4 right-4 text-gray-500 hover:text-gray-800" onClick={handleCloseModal}>
                             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

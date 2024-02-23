@@ -8,9 +8,16 @@ import LanguageBtn from '../Language';
 
 function PatientCorner() {
   const [activeTab, setActiveTab] = useState(1);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handleTabChange = (tabIndex) => {
@@ -18,8 +25,8 @@ function PatientCorner() {
   };
 
   return (
-    <div className="p-8 mt-40">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mb-8">
+    <div className='mx-10'>
+      <div className="mt-40 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mb-8">
         <button
           className={`rounded-lg py-4 px-4 text-lg ${activeTab === 1 ? 'bg-black text-white' : 'bg-gray-200'}`}
           onClick={() => handleTabChange(1)}
@@ -43,7 +50,7 @@ function PatientCorner() {
       <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 mb-20">
         {activeTab === 1 && (
           <div>
-            <DiseaseCategories/>
+            <DiseaseCategories />
           </div>
         )}
 
@@ -59,8 +66,8 @@ function PatientCorner() {
         )}
       </div>
       <Footer />
-      <LanguageBtn/>
-      <ChatWithAIButton/>
+      <LanguageBtn />
+      <ChatWithAIButton />
     </div>
   );
 }

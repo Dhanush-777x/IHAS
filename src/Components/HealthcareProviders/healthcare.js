@@ -12,14 +12,18 @@ function Healthcare() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+  const [loaded, setLoaded] = useState(false);
   const handleTabChange = (tabIndex) => {
     setActiveTab(tabIndex);
   };
 
+  const timer = setTimeout(() => {
+    setLoaded(true);
+  }, 500);
+
   return (
     <div>
-    <div className="p-8 mt-40">
+    <div className={`p-8 mt-40 transition-all duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mb-8">
         <button
           className={`rounded-lg py-4 px-4 text-lg ${activeTab === 1 ? 'bg-black text-white' : 'bg-gray-200'}`}
