@@ -15,7 +15,7 @@ const ResearchPapers = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                let apiUrl = `http://localhost:5000/api/research-papers?start=${(currentPage - 1) * itemsPerPage}&num=${itemsPerPage}`;
+                let apiUrl = `http://localhost:5001/api/research-papers?start=${(currentPage - 1) * itemsPerPage}&num=${itemsPerPage}`;
                 if (searchQuery) {
                     apiUrl += `&search=${searchQuery}`;
                 }

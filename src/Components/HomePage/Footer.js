@@ -3,6 +3,8 @@ import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../Assets/logo.png';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import Feedback from './Feedback';
+
 function Footer() {
   const [loaded, setLoaded] = useState(false);
   setTimeout(() => {
@@ -20,6 +22,7 @@ function Footer() {
                         <a href="#Section1" className="footer-link">Home</a>
                         <a href="#Section2" className="footer-link">Features</a>
                         <a href="#Section1" className="footer-link">About</a>
+                        <Feedback/>
                     </div>
                     <div className="footer-social-icons">
                         <a href="#Section1" className="footer-icon px-4"><FontAwesomeIcon icon={faFacebook} /></a>

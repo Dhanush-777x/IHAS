@@ -7,7 +7,7 @@ const Links = () => {
 
   const fetchData = async (page) => {
     try {
-      const response = await axios.get(`http://localhost:5000/scrape?page=${page}`);
+      const response = await axios.get(`http://localhost:5003/scrape?page=${page}`);
       console.log(response.data);
       setScrapedData(response.data);
     } catch (error) {

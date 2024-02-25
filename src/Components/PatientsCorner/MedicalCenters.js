@@ -7,7 +7,7 @@ const MedicalCenters = () => {
 
   useEffect(() => {
     const googleMapScript = document.createElement('script');
-    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=&libraries=places`;
+    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyC1er3X-G0P4ux1L9Pilcw3e6FciTwMrXM&libraries=places`;
     window.document.body.appendChild(googleMapScript);
     googleMapScript.addEventListener('load', initMap);
 

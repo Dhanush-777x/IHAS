@@ -6,6 +6,7 @@ import ChatWithAIButton from '../chatWithai';
 import DiseaseCategories from './DiseaseCategories';
 import LanguageBtn from '../Language';
 
+
 function PatientCorner() {
   const [activeTab, setActiveTab] = useState(1);
 
@@ -24,7 +25,7 @@ function PatientCorner() {
           className={`rounded-lg py-4 px-4 text-lg ${activeTab === 1 ? 'bg-black text-white' : 'bg-gray-200'}`}
           onClick={() => handleTabChange(1)}
         >
-          Diseases
+          Diseases and Conditions
         </button>
         <button
           className={`rounded-lg py-4 px-4 text-lg ${activeTab === 2 ? 'bg-black text-white' : 'bg-gray-200'}`}

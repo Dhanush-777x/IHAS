@@ -14,6 +14,12 @@ import MchGuidelines from './Components/HealthcareProviders/GuidelineCategories/
 import DiabetesGuidelines from './Components/HealthcareProviders/GuidelineCategories/DiabetesGuidelines';
 import Links from './Components/Links';
 import Helpline from './Components/HomePage/Helpline';
+import Mch from './Components/PatientsCorner/Mch';
+import DiabetesInfo from './Components/PatientsCorner/DiabetesInfo';
+import VbInfo from './Components/PatientsCorner/VbInfo';
+import Dengue from './Components/PatientsCorner/VectorBorne.js/Dengue';
+import Malaria from './Components/PatientsCorner/VectorBorne.js/Malaria';
+import Chikungunya from './Components/PatientsCorner/VectorBorne.js/Chikungunya';
 
 
 function App() {
@@ -29,7 +35,16 @@ function App() {
           <Route path="/medical-centers" element={<MedicalCenters />} />
           <Route path="/healthcare-providers" element={<Healthcare />} />
 
+          <Route path="/vector-borne-diseases" element={ <VbInfo/>} />
+          <Route path="/diabetes" element={<DiabetesInfo/>} />
+          <Route path="/maternal-child-care" element={<Mch/>} />x1
+
+          <Route path="/dengue" element={<Dengue/>} />
+          <Route path="/malaria" element={<Malaria/>} />
+          <Route path="/chikungunya" element={<Chikungunya/>} />
+
           <Route path="/useful-links" element={<Links />} />
+          
           {/* Guideline Categories */}
           <Route path="/vector-borne-diseases-guidelines" element={<VectorBorneGuidelines />} />
           <Route path="/maternal-childcare-guidelines" element={<MchGuidelines />} />

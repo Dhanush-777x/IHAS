@@ -11,7 +11,7 @@ const News = () => {
           params: {
             country: 'us',
             category: 'health',
-            apiKey: '7b0d8cbdc40c464d8630f3e1ef0fdf3'
+            apiKey: '7b0d8cbdc40c464d8630f3e1ef0fdf3e'
           }
         });
         setNews(response.data.articles.slice(0, 8));

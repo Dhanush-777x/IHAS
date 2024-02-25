@@ -8,7 +8,7 @@ const Pharmacies = () => {
   useEffect(() => {
 
     const googleMapScript = document.createElement('script');
-    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=&libraries=places`;
+    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyC1er3X-G0P4ux1L9Pilcw3e6FciTwMrXM&libraries=places`;
     // AIzaSyC1er3X-G0P4ux1L9Pilcw3e6FciTwMrXM
     window.document.body.appendChild(googleMapScript);
     googleMapScript.addEventListener('load', initMap);
@@ -83,8 +83,8 @@ const Pharmacies = () => {
         const request = {
           location: location,
           radius: '5000',
-          type: 'hospital',
-          keyword: 'hospital'
+          type: 'pharmacy',
+          keyword: 'pharmacy'
         };
 
         const service = new window.google.maps.places.PlacesService(map);
